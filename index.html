@@ -4,49 +4,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Binary Number System Converter</title>
+
+    <title>Binary Number System Converter | CVRGU</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <style>
+        .college-header {
+            text-align: center;
+            background: #ffffff;
+            padding: 25px 15px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            border-top: 5px solid #174ea6;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+        }
+
+        .college-header h1 {
+            color: #174ea6;
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .college-header h2 {
+            color: #333;
+            font-size: 19px;
+        }
+
+        .student-details {
+            text-align: left;
+            background: #f3f6fc;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 18px;
+            line-height: 1.9;
+        }
+
+        .project-title {
+            text-align: center;
+            margin: 25px 0;
+            color: #174ea6;
+        }
+
+        .form-grid {
+            display: grid;
+            gap: 10px;
+            margin-bottom: 15px;
+        }
+
+        input, select, button {
+            padding: 11px;
+            font-size: 16px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        button {
+            background: #174ea6;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 5px 0;
+        }
+
+        button:hover {
+            background: #103775;
+        }
+
+        .result-box {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            background: #eef5ff;
+            overflow-wrap: anywhere;
+        }
+
+        #result {
+            font-size: 23px;
+            font-weight: bold;
+            color: #174ea6;
+        }
+
+        #error {
+            color: #c62828;
+        }
+
+        .info-box {
+            margin-top: 25px;
+            padding: 15px;
+            background: #f7f7f7;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 25px;
+            padding: 15px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Binary Number System Converter</h1>
-        <p>Convert numbers between Binary, Octal, Decimal and Hexadecimal.</p>
 
-        <h2>Number Converter</h2>
+    <main class="container">
 
-        <label for="numberInput">Enter Number</label>
-        <input type="text" id="numberInput" placeholder="Enter a number">
+        <!-- COLLEGE HEADER -->
+        <header class="college-header">
 
-        <label for="fromBase">Convert From</label>
-        <select id="fromBase">
-            <option value="2">Binary (Base 2)</option>
-            <option value="8">Octal (Base 8)</option>
-            <option value="10" selected>Decimal (Base 10)</option>
-            <option value="16">Hexadecimal (Base 16)</option>
-        </select>
+            <h1>C V Raman Global University</h1>
 
-        <label for="toBase">Convert To</label>
-        <select id="toBase">
-            <option value="2" selected>Binary (Base 2)</option>
-            <option value="8">Octal (Base 8)</option>
-            <option value="10">Decimal (Base 10)</option>
-            <option value="16">Hexadecimal (Base 16)</option>
-        </select>
+            <h2>Experiential Learning Project</h2>
 
-        <button id="convertBtn" type="button">Convert</button>
+            <p><strong>Department:</strong> Electronics and Communication Engineering</p>
 
-        <h3>Result</h3>
-        <p id="result">Your result will appear here.</p>
-        <p id="error" role="alert"></p>
-        <button id="copyBtn" type="button" style="display:none;">Copy Result</button>
+            <div class="student-details">
+                <p><strong>Student Name:</strong> Utsav Kumar</p>
 
-        <h3>Try Examples</h3>
-        <button type="button" data-example="45" data-from="10" data-to="2">45 to Binary</button>
-        <button type="button" data-example="101101" data-from="2" data-to="10">Binary to Decimal</button>
-        <button type="button" data-example="255" data-from="10" data-to="16">255 to Hexadecimal</button>
-    </div>
+                <p><strong>Registration Number:</strong>
+                    YOUR_REGISTRATION_NUMBER
+                </p>
 
+                <p><strong>Branch:</strong> B.Tech ECE</p>
+
+                <p><strong>Subject:</strong> Digital Electronics</p>
+
+                <p><strong>Project Title:</strong>
+                    Binary Number System Converter
+                </p>
+            </div>
+
+        </header>
+
+        <!-- PROJECT TITLE -->
+        <h1 class="project-title">
+            Binary Number System Converter
+        </h1>
+
+        <p style="text-align:center;">
+            Convert numbers between Binary, Octal, Decimal and Hexadecimal.
+        </p>
+
+        <!-- CONVERTER -->
+        <section class="converter">
+
+            <h2>Number Converter</h2>
+
+            <div class="form-grid">
+
+                <label for="numberInput">Enter Number</label>
+
+                <input
+                    type="text"
+                    id="numberInput"
+                    placeholder="Example: 45"
+                    autocomplete="off"
+                >
+
+                <label for="fromBase">Convert From</label>
+
+                <select id="fromBase">
+                    <option value="2">Binary (Base 2)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="10" selected>Decimal (Base 10)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                </select>
+
+                <label for="toBase">Convert To</label>
+
+                <select id="toBase">
+                    <option value="2" selected>Binary (Base 2)</option>
+                    <option value="8">Octal (Base 8)</option>
+                    <option value="10">Decimal (Base 10)</option>
+                    <option value="16">Hexadecimal (Base 16)</option>
+                </select>
+
+            </div>
+
+            <button id="convertBtn" type="button">Convert Number</button>
+
+            <div class="result-box">
+
+                <h3>Conversion Result</h3>
+
+                <p id="result" aria-live="polite">
+                    Your result will appear here.
+                </p>
+
+                <p id="error" role="alert"></p>
+
+                <button
+                    id="copyBtn"
+                    type="button"
+                    style="display:none;"
+                >
+                    Copy Result
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- EXAMPLES -->
+        <section class="info-box">
+
+            <h2>Try Examples</h2>
+
+            <button
+                type="button"
+                data-example="45"
+                data-from="10"
+                data-to="2"
+            >
+                Convert 45 to Binary
+            </button>
+
+            <button
+                type="button"
+                data-example="101101"
+                data-from="2"
+                data-to="10"
+            >
+                Convert Binary to Decimal
+            </button>
+
+            <button
+                type="button"
+                data-example="255"
+                data-from="10"
+                data-to="16"
+            >
+                Convert 255 to Hexadecimal
+            </button>
+
+        </section>
+
+        <!-- NUMBER SYSTEM INFORMATION -->
+        <section class="info-box">
+
+            <h2>Number System Information</h2>
+
+            <p><strong>Binary (Base 2):</strong>
+                Uses digits 0 and 1.
+            </p>
+
+            <p><strong>Octal (Base 8):</strong>
+                Uses digits 0 to 7.
+            </p>
+
+            <p><strong>Decimal (Base 10):</strong>
+                Uses digits 0 to 9.
+            </p>
+
+            <p><strong>Hexadecimal (Base 16):</strong>
+                Uses digits 0 to 9 and letters A to F.
+            </p>
+
+        </section>
+
+        <footer>
+            <p>Digital Electronics | Experiential Learning Project</p>
+            <p>C V Raman Global University</p>
+        </footer>
+
+    </main>
+
+    <!-- JAVASCRIPT FILE -->
     <script src="script.js"></script>
+
 </body>
 </html>
 ```
