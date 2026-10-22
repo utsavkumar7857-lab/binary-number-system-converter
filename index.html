@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+```
+<title>Binary Number System Converter | CV Raman Global University</title>
+
+<link rel="stylesheet" href="style.css">
+```
+
+</head>
+
+<body>
+
+```
+<main class="app">
+
+    <!-- COLLEGE AND STUDENT DETAILS -->
+    <header class="college-header">
+
+        <div class="university-badge">
+            ENGINEERING PROJECT
+        </div>
+
+        <h1 class="college-name">
+            C.V. RAMAN GLOBAL UNIVERSITY
+        </h1>
+
+        <h2 class="college-location">
+            BHUBANESWAR, ODISHA
+        </h2>
+
+        <div class="student-details">
+
+            <p>
+                <span>Name:</span> Utsav Kumar
+            </p>
+
+            <p>
+                <span>Registration No.:</span> 2501020768
+            </p>
+
+            <p>
+                <span>Branch:</span> Electronics and Communication Engineering (ECE)
+            </p>
+
+        </div>
+
+        <div class="header-line"></div>
+
+        <p class="project-label">
+            DIGITAL ELECTRONICS
+        </p>
+
+        <h2 class="project-title">
+            Binary Number System
+            <span>Converter</span>
+        </h2>
+
+        <p class="project-description">
+            An interactive web application for converting numbers
+            between Binary, Decimal, Octal and Hexadecimal systems.
+        </p>
+
+    </header>
+
+
+    <!-- NUMBER CONVERTER -->
+    <section class="card">
+
+        <h2>Number Converter</h2>
+
+        <div class="form-grid">
+
+            <label>
+                Enter Number
+
+                <input
+                    type="text"
+                    id="inputNumber"
+                    placeholder="Enter a number"
+                >
+            </label>
+
+            <label>
+                Convert From
+
+                <select id="fromBase">
+
+                    <option value="2">
+                        Binary (Base 2)
+                    </option>
+
+                    <option value="10" selected>
+                        Decimal (Base 10)
+                    </option>
+
+                    <option value="8">
+                        Octal (Base 8)
+                    </option>
+
+                    <option value="16">
+                        Hexadecimal (Base 16)
+                    </option>
+
+                </select>
+            </label>
+
+        </div>
+
+        <button id="convertBtn">
+            Convert Number
+        </button>
+
+        <p id="message" role="status"></p>
+
+        <div id="results" class="results" hidden>
+
+            <div class="result">
+                <span>Binary (Base 2)</span>
+                <strong id="binaryResult"></strong>
+                <button class="copy" data-copy="binaryResult">
+                    Copy
+                </button>
+            </div>
+
+            <div class="result">
+                <span>Decimal (Base 10)</span>
+                <strong id="decimalResult"></strong>
+                <button class="copy" data-copy="decimalResult">
+                    Copy
+                </button>
+            </div>
+
+            <div class="result">
+                <span>Octal (Base 8)</span>
+                <strong id="octalResult"></strong>
+                <button class="copy" data-copy="octalResult">
+                    Copy
+                </button>
+            </div>
+
+            <div class="result">
+                <span>Hexadecimal (Base 16)</span>
+                <strong id="hexResult"></strong>
+                <button class="copy" data-copy="hexResult">
+                    Copy
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- EXAMPLE NUMBERS -->
+    <section class="card examples">
+
+        <h2>Try an Example</h2>
+
+        <p>
+            Select an example to see how number conversion works.
+        </p>
+
+        <div class="example-buttons">
+
+            <button
+                class="example"
+                data-number="101101"
+                data-base="2">
+                Binary: 101101
+            </button>
+
+            <button
+                class="example"
+                data-number="45"
+                data-base="10">
+                Decimal: 45
+            </button>
+
+            <button
+                class="example"
+                data-number="55"
+                data-base="8">
+                Octal: 55
+            </button>
+
+            <button
+                class="example"
+                data-number="2D"
+                data-base="16">
+                Hexadecimal: 2D
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- INFORMATION ABOUT NUMBER SYSTEMS -->
+    <section class="info-grid">
+
+        <article class="card info">
+
+            <h3>Binary — Base 2</h3>
+
+            <p>
+                The binary number system uses only two digits,
+                0 and 1. It is widely used in digital electronics
+                and computer systems.
+            </p>
+
+        </article>
+
+        <article class="card info">
+
+            <h3>Decimal — Base 10</h3>
+
+            <p>
+                The decimal number system uses ten digits,
+                from 0 to 9. It is commonly used in everyday
+                calculations.
+            </p>
+
+        </article>
+
+        <article class="card info">
+
+            <h3>Octal — Base 8</h3>
+
+            <p>
+                The octal number system uses digits from 0 to 7.
+                Each octal digit represents three binary bits.
+            </p>
+
+        </article>
+
+        <article class="card info">
+
+            <h3>Hexadecimal — Base 16</h3>
+
+            <p>
+                The hexadecimal system uses digits 0 to 9 and
+                letters A to F. Each hexadecimal digit represents
+                four binary bits.
+            </p>
+
+        </article>
+
+    </section>
+
+
+    <!-- PROJECT FOOTER -->
+    <footer>
+
+        <p>
+            C.V. Raman Global University, Bhubaneswar, Odisha
+        </p>
+
+        <p>
+            Project by Utsav Kumar | ECE
+        </p>
+
+        <p class="footer-small">
+            Digital Electronics Experiential Learning Project
+        </p>
+
+    </footer>
+
+</main>
+
+<script src="script.js"></script>
+```
+
+</body>
+</html>
